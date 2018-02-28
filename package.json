@@ -1,5 +1,5 @@
 {
-  "name": "octokit-rest-es3",
+  "name": "octokit-rest-for-node-v0.12",
   "version": "1.0.0",
   "description": "",
   "main": "build.js",
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@octokit/rest": "^14.0.9",
+    "@octokit/rest": "14.0.9",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.6.1",
