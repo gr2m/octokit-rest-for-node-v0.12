@@ -18,7 +18,7 @@
     "babel-preset-env": "^1.6.1",
     "browserify": "^16.1.0"
   },
-  "repository": "https://github.com/gr2m/octokit-rest-es3",
+  "repository": "https://github.com/gr2m/octokit-rest-for-node-v0.12",
   "babel": {
     "presets": [
       [
