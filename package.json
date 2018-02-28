@@ -1,0 +1,34 @@
+{
+  "name": "octokit-rest-es3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "browserify --bare --standalone Octokit index.js > browserified.js",
+    "build": "babel browserified.js --presets env --out-file build.js",
+    "test": "node test.js"
+  },
+  "main": "build.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@octokit/rest": "^14.0.9",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browserify": "^16.1.0"
+  },
+  "repository": "https://github.com/gr2m/octokit-rest-es3",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "v0.12"
+          }
+        }
+      ]
+    ]
+  }
+}

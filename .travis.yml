@@ -1,0 +1,7 @@
+language: node_js
+node_js: lts/*
+
+before_script: npm run build
+script:
+  - nvm use 0.12
+  - npm test
