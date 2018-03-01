@@ -1,3 +1,4 @@
+var assert = require('assert')
 var octokit = require('./build')()
 
 if (!process.env.GH_TOKEN) {
@@ -9,6 +10,7 @@ octokit.authenticate({
   token: process.env.GH_TOKEN
 })
 
+console.log('octokit.repos.get()')
 octokit.repos.get({
   owner: 'octokit',
   repo: 'rest.js'
@@ -16,6 +18,15 @@ octokit.repos.get({
 
 .then(function () {
   console.log('ok')
+
+  console.log('octokit.authorization.getOrCreateAuthorizationForApp()')
+  return octokit.authorization.getOrCreateAuthorizationForApp({
+    client_secret: 'abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd'
+  })
+
+  .catch(function (error) {
+    assert(error.code, 403)
+  })
 })
 
 .catch(function (error) {
