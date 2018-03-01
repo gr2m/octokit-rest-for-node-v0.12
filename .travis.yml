@@ -1,5 +1,8 @@
 language: node_js
 node_js: lts/*
+cache:
+  directories:
+    - ~/.npm
 
 before_script: npm run build
 script: npx node@0.12 test.js
